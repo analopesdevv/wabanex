@@ -5,6 +5,9 @@ defmodule Wabanex.User do
   # importanto todas as funçãoes de changeset para conversão e validação de dados
   import Ecto.Changeset
 
+  # geração de uui automatica
+  @primary_key {:id, :binary_id, autogenerate: true}
+
   # variavel com os campos necessários do schema
   @fields [:email, :password, :name]
 
